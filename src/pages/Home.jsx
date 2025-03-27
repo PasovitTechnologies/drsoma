@@ -12,7 +12,7 @@ import Publications from "../components/HomeComponents/Publications";
 
 const Home = () => {
   return (
-    <div className="bg-[#e8e6e6] ">
+    <div className="bg-[#e8e6e6] px-4 md:px-0">
       <HeroSection />
       <Specializations />
       <Education />

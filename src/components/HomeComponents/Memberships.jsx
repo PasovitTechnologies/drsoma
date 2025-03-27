@@ -180,7 +180,7 @@ export default function Memberships() {
         <h2 className="text-4xl font-semibold text-[#420075]">
           Членство в профессиональных организациях
         </h2>
-        <ul className="list-disc list-outside pl-6 md:pl-28 space-y-2">
+        <ul className="list-disc list-outside pl-4 md:pl-28 space-y-2">
           {professionalMemberships.map((membership, index) => (
             <li
               key={index}
@@ -195,7 +195,7 @@ export default function Memberships() {
         <h2 className="text-4xl font-semibold text-[#420075]">
           Общественные позиции
         </h2>
-        <ul className="list-disc list-outside pl-6 md:pl-28 space-y-2">
+        <ul className="list-disc list-outside pl-4 md:pl-28 space-y-2">
           {publicPositions.map((position, index) => (
             <li key={index}>
               <b> {position.year} </b>
@@ -212,7 +212,7 @@ export default function Memberships() {
         <h2 className="text-4xl font-semibold text-[#420075]">
           Профессиональный опыт
         </h2>
-        <ul className="list-disc list-outside pl-6 md:pl-28 space-y-2">
+        <ul className="list-disc list-outside pl-4 md:pl-28 space-y-2">
           {professionalExperience.map((experience, index) => (
             <li
               key={index}
@@ -225,7 +225,7 @@ export default function Memberships() {
       {/* Philanthropy */}
       <div className="space-y-6 pt-22">
         <h2 className="text-4xl font-semibold text-[#420075]">Филантропия</h2>
-        <div className="pl-6 md:pl-24">
+        <div className="pl-4 md:pl-24">
           <strong className="text-lg">
             Учрежденные стипендии (основатель и спонсор):
           </strong>

@@ -56,7 +56,7 @@ export default function Publications() {
 
   return (
     <section id="publications" className="max-w-5xl mx-auto  pt-22 pb-10">
-      <div className="text-[#420075] flex justify-between items-center">
+      <div className="text-[#420075] flex flex-col md:flex-row justify-between md:items-center gap-4">
         <h2 className="text-4xl font-semibold ">
           Избранные публикации (Всего более 130)
         </h2>
@@ -78,7 +78,7 @@ export default function Publications() {
           </a>
         </div>
       </div>
-      <ol className="mt-4 md:pl-28 space-y-1.5 list-decimal list-outside leading-7">
+      <ol className="mt-4 pl-4 md:pl-28 space-y-1.5 list-decimal list-outside leading-7">
         {publications.map((item, index) => (
           <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
         ))}

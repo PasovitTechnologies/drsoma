@@ -162,7 +162,7 @@ export default function Awards() {
       <div className="space-y-6">
         <h2 className="text-4xl font-semibold text-[#420075]">Награды</h2>
 
-        <ul className="list-disc list-outside pl-6 md:pl-28 space-y-2">
+        <ul className="list-disc list-outside pl-4 md:pl-28 space-y-2">
           {awards.map((award, index) => (
             <li key={index}>
               <b> {award.year} </b>
@@ -177,7 +177,7 @@ export default function Awards() {
         <h2 className="text-4xl font-semibold text-[#420075]">
           Редакторский опыт
         </h2>
-        <ul className="list-disc list-outside pl-6  md:pl-28 space-y-2.5">
+        <ul className="list-disc list-outside pl-4  md:pl-28 space-y-2.5">
           {editorialExperience.map((experience, index) => (
             <li key={index}>{experience}</li>
           ))}
