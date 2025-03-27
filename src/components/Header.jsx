@@ -1,0 +1,226 @@
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("Dr Soma");
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const navItems = [
+    { title: "Dr Soma", href: "/" },
+    { title: "Контакты", href: "/contact" },
+    { title: "Специализации", href: "#specializations" },
+    { title: "Образование", href: "#education" },
+    { title: "Как попасть на приём?", href: "#additional-education" },
+    { title: "Научные интересы", href: "#research-interests" },
+    { title: "Проекты", href: "#projects" },
+    { title: "Опыт работы", href: "#work-experience" },
+    { title: "Награды", href: "#awards" },
+  ];
+
+  const extraNavItems = [
+    { title: "Членство в организациях", href: "#memberships" },
+    { title: "Публикации", href: "#publications" },
+    { title: "About", href: "#about" },
+    { title: "Experience", href: "https://example.com/experience" },
+    { title: "Editorial", href: "https://example.com/editorial" },
+    { title: "Награды", href: "https://example.com/awards" },
+    { title: "Пожертвования", href: "https://example.com/donations" },
+    { title: "Contact", href: "https://example.com/contact" },
+  ];
+
+  // Scroll to section
+  const scrollToSection = (id) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Handle navigation and scrolling
+  // Handle navigation and scrolling
+  const handleNavigation = (href, title) => {
+    if (href === "/") {
+      if (location.pathname !== "/") {
+        navigate("/", { replace: true });
+        setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } else if (href.startsWith("#")) {
+      if (location.pathname !== "/") {
+        navigate("/", { replace: true });
+        setTimeout(() => scrollToSection(href), 100);
+      } else {
+        scrollToSection(href);
+      }
+    } else {
+      navigate(href);
+    }
+    setActiveTab(title);
+  };
+
+  // Highlight active tab when scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 150;
+
+      if (scrollPosition <= 200) {
+        setActiveTab("Dr Soma"); // Highlight when at the top
+        return;
+      }
+
+      for (let item of [...navItems, ...extraNavItems]) {
+        if (item.href.startsWith("#")) {
+          const section = document.querySelector(item.href);
+          if (section) {
+            const { top, bottom } = section.getBoundingClientRect();
+            if (top <= 150 && bottom >= 150) {
+              setActiveTab(item.title);
+              break;
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to section if URL has hash
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      setTimeout(() => scrollToSection(location.hash), 100);
+    }
+  }, [location]);
+
+  return (
+    <header className="bg-white shadow fixed w-full h-20 text-sm flex z-50">
+      <div className="max-w-7xl mx-auto w-full px-4 py-4 flex items-center justify-between">
+        <nav className="hidden md:flex justify-between w-full text-[rgb(15,58,97)] font-medium">
+          {navItems.map((item) => (
+            <button
+              key={item.title}
+              className={`transition-all duration-200 cursor-pointer ${
+                activeTab === item.title
+                  ? "text-[rgb(255,136,120)]"
+                  : "hover:text-[rgb(255,136,120)]"
+              }`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation(item.href, item.title);
+              }}
+            >
+              {item.title}
+            </button>
+          ))}
+
+          {/* Dropdown for extra items */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button
+              className={`cursor-pointer transition-all duration-200 
+                
+                   hover:text-[rgb(255,136,120)]
+              `}
+              onClick={() => setActiveTab("Ещё")}
+            >
+              Ещё
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute left-[50%] translate-x-[-50%] w-52 bg-white rounded shadow-lg z-10 space-y-3 p-4 pt-8">
+                {extraNavItems.map((item) => (
+                  <button
+                    key={item.title}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigation(item.href, item.title);
+                    }}
+                    className={`block hover:underline  ${
+                      activeTab === item.title
+                        ? "text-[rgb(255,136,120)]"
+                        : "hover:text-[rgb(255,136,120)]"
+                    }`}
+                  >
+                    {item.title}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </nav>
+
+        {/* Mobile Menu Toggle */}
+        <div
+          className="md:hidden text-blue-900 text-4xl cursor-pointer absolute right-5 top-5"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          ☰
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[90%] bg-white shadow-lg border-l p-6 space-y-3 text-blue-900 font-medium z-50 transition-transform duration-300 ease-in-out
+    ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        {/* Close Button - Same Position as Hamburger */}
+        <div
+          className="absolute right-5 top-5 text-4xl cursor-pointer text-red-500"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          ✕
+        </div>
+
+        {/* Mobile Navigation Items */}
+        <div className=" mt-10">
+          {navItems.map((item) => (
+            <button
+              key={item.title}
+              className={`block text-xl py-2 mb-4 ${
+                activeTab === item.title ? "text-red-500" : "hover:text-red-500"
+              }`}
+              onClick={() => {
+                handleNavigation(item.href, item.title);
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Extra items in mobile */}
+        <details className="mt-2 text-xl">
+          <summary className="cursor-pointer">Ещё</summary>
+          <div className="pl-4 mt-3 space-y-3">
+            {extraNavItems.map((item) => (
+              <button
+                key={item.title}
+                className={`block hover:underline ${
+                  activeTab === item.title ? "text-red-500" : ""
+                }`}
+                onClick={() => {
+                  handleNavigation(item.href, item.title);
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+        </details>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
