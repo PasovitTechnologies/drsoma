@@ -24,9 +24,9 @@ const Header = () => {
   const extraNavItems = [
     { title: "Членство в организациях", href: "#memberships" },
     { title: "Публикации", href: "#publications" },
-    { title: "About", href: "#about" },
-    { title: "Experience", href: "https://example.com/experience" },
-    { title: "Editorial", href: "https://example.com/editorial" },
+    { title: "About", href: "/about" },
+    { title: "Experience", href: "/experience" },
+    { title: "Editorial", href: "/editorial" },
     { title: "Награды", href: "/general" },
     { title: "Пожертвования", href: "https://www.eafo.info/ru/donate" },
     { title: "Contact", href: "/contact-3" },
@@ -159,7 +159,7 @@ const Header = () => {
                       e.preventDefault();
                       handleNavigation(item.href, item.title);
                     }}
-                    className={`block hover:underline  ${
+                    className={`block hover:underline cursor-pointer ${
                       activeTab === item.title
                         ? "text-[rgb(255,136,120)]"
                         : "hover:text-[rgb(255,136,120)]"
