@@ -27,8 +27,8 @@ const Header = () => {
     { title: "About", href: "#about" },
     { title: "Experience", href: "https://example.com/experience" },
     { title: "Editorial", href: "https://example.com/editorial" },
-    { title: "Награды", href: "https://example.com/awards" },
-    { title: "Пожертвования", href: "https://example.com/donations" },
+    { title: "Награды", href: "/general" },
+    { title: "Пожертвования", href: "https://www.eafo.info/ru/donate" },
     { title: "Contact", href: "https://example.com/contact" },
   ];
 
@@ -43,7 +43,10 @@ const Header = () => {
   // Handle navigation and scrolling
   // Handle navigation and scrolling
   const handleNavigation = (href, title) => {
-    if (href === "/") {
+    if (href.startsWith("http")) {
+      // ✅ Open external links in a new tab
+      window.open(href, "_blank", "noopener,noreferrer");
+    } else if (href === "/") {
       if (location.pathname !== "/") {
         navigate("/", { replace: true });
         setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
@@ -60,6 +63,7 @@ const Header = () => {
     } else {
       navigate(href);
     }
+
     setActiveTab(title);
   };
 
@@ -97,6 +101,18 @@ const Header = () => {
       setTimeout(() => scrollToSection(location.hash), 100);
     }
   }, [location]);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    } else {
+      document.body.style.overflow = ""; // Allow scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // Cleanup when component unmounts
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="bg-white shadow fixed w-full h-20 text-sm flex z-50">
@@ -168,7 +184,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-[90%] bg-white shadow-lg border-l p-6 space-y-3 text-blue-900 font-medium z-50 transition-transform duration-300 ease-in-out
+        className={`fixed top-0 right-0 h-full w-[90%] bg-white shadow-lg overflow-y-scroll border-l  p-6 space-y-3 text-blue-900 font-medium z-50 transition-transform duration-300 ease-in-out
     ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Close Button - Same Position as Hamburger */}
@@ -200,7 +216,7 @@ const Header = () => {
         {/* Extra items in mobile */}
         <details className="mt-2 text-xl">
           <summary className="cursor-pointer">Ещё</summary>
-          <div className="pl-4 mt-3 space-y-3">
+          <div className="pl-4  my-3 space-y-3">
             {extraNavItems.map((item) => (
               <button
                 key={item.title}

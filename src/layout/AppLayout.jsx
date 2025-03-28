@@ -5,13 +5,13 @@ import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main className="pt-20">
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
