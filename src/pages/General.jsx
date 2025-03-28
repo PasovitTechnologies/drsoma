@@ -153,7 +153,7 @@ const General = () => {
             </span>
 
             <p
-              className="text-[rgb(59,59,59)] leading-[1.6em]"
+              className="text-[rgb(59,59,59)] font-questrial leading-[1.6em]"
               dangerouslySetInnerHTML={{ __html: award.description }}
             ></p>
           </li>

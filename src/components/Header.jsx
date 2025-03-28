@@ -29,7 +29,7 @@ const Header = () => {
     { title: "Editorial", href: "https://example.com/editorial" },
     { title: "Награды", href: "/general" },
     { title: "Пожертвования", href: "https://www.eafo.info/ru/donate" },
-    { title: "Contact", href: "https://example.com/contact" },
+    { title: "Contact", href: "/contact-3" },
   ];
 
   // Scroll to section
