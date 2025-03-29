@@ -1,12 +1,10 @@
 import React from "react";
 
-/*************  ✨ Codeium Command ⭐  *************/
 /**
  * Component displaying contact information of the organization
  *
  * @returns JSX.Element
  */
-/******  4f97f41f-ffb3-47fb-ac02-1c0bffbe5e5c  *******/
 const Contacts = () => {
   return (
     <div className="text-center  h-[80vh] font-bold text-xl md:text-2xl flex flex-col  justify-center text-[rgb(40,41,66)] px-4 ">
