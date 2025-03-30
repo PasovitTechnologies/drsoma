@@ -31,7 +31,7 @@ export default function Introduction() {
   const [emblaRef] = useEmblaCarousel({ loop: true });
 
   return (
-    <div className="relative bg-gray-100 pb-16 md:pb-20">
+    <div className="relative bg-gray-100 pb-16 md:pb-20 oveflow-hidden">
       {/* Top Section */}
       <div className="relative pb-16">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 py-10 md:py-16 px-4 md:px-6">
@@ -92,7 +92,7 @@ export default function Introduction() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="mt-6 max-w-4xl relative mx-auto px-4"
+        className="mt-6 max-w-4xl relative mx-auto overflow-hidden px-4"
       >
         <button
           className="prev absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white cursor-pointer"
