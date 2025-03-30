@@ -2,48 +2,11 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
+import { profiles } from "../../constants/data";
 
 export default function HeroSection() {
   const [leftVideoPlaying, setLeftVideoPlaying] = useState(false);
   const [rightVideoPlaying, setRightVideoPlaying] = useState(false);
-
-  const profiles = [
-    {
-      title: "Основатель и директор",
-      organization:
-        'АНО "Научно-образовательный центр "Евразийская онкологическая программа "ЕАФО"',
-      location: "Москва, Российская Федерация",
-    },
-    {
-      title: "Основатель и директор",
-      organization: "Евразийская федерация онкологии (EAFO)",
-      location: "Шотландия, Объединенное Королевство",
-    },
-    {
-      title: "Основатель и председатель",
-      organization: "Евразийская глобальная миротворческая миссия (EGPM)",
-      location: "Москва, Российская Федерация",
-    },
-    {
-      title: "Основатель и председатель Совета директоров",
-      organization: "Евразийский совет по онкологическим исследованиям (ECRC)",
-      location: "Мумбай, Индия",
-    },
-    {
-      title: "Основатель",
-      organization: "Евразийский противораковый фонд (EACF)",
-      location: "Москва, Российская Федерация",
-    },
-    {
-      title: "Основатель и генеральный секретарь",
-      organization: "Евразийское общество по онкологии головы и шеи (EASHNO)",
-    },
-    {
-      title: "Со-основатель",
-      organization: "Противораковый фонд «Ребенок может» (ChildCan)",
-      location: "Горакхпур, Индия",
-    },
-  ];
 
   return (
     <div className=" pt-10 px-4 flex flex-col tracking-wider items-center text-center">

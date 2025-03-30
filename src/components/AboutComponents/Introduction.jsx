@@ -87,54 +87,56 @@ export default function Introduction() {
       </div>
 
       {/* Logo Carousel */}
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5 }}
-        viewport={{ once: true }}
-        className="mt-6 max-w-4xl relative mx-auto overflow-hidden px-4"
-      >
-        <button
-          className="prev absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white cursor-pointer"
-          style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.8)" }}
+      <div className="overflow-hidden ">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5 }}
+          viewport={{ once: true }}
+          className="mt-6 max-w-screen md:max-w-4xl relative mx-auto  px-4"
         >
-          ❮
-        </button>
+          <button
+            className="prev absolute left-1 md:-left-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white cursor-pointer"
+            style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.8)" }}
+          >
+            ❮
+          </button>
 
-        <Swiper
-          slidesPerView={1.5}
-          breakpoints={{
-            640: { slidesPerView: 2.5 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: "auto" },
-          }}
-          loop={true}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
-          modules={[Autoplay, Navigation]}
-          navigation={{ prevEl: ".prev", nextEl: ".next" }}
-          spaceBetween={10}
-          className="max-w-4xl"
-        >
-          {logos.map((logo, index) => (
-            <SwiperSlide key={index} className="!w-auto">
-              <div className="flex items-center justify-center h-24 md:h-32 px-2 md:px-4">
-                <img
-                  src={logo}
-                  alt={`Logo ${index}`}
-                  className={`object-contain ${logoSizes[index]}`}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <Swiper
+            slidesPerView={1.5}
+            breakpoints={{
+              640: { slidesPerView: 2.5 },
+              768: { slidesPerView: 3 },
+              1024: { slidesPerView: "auto" },
+            }}
+            loop={true}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            modules={[Autoplay, Navigation]}
+            navigation={{ prevEl: ".prev", nextEl: ".next" }}
+            spaceBetween={10}
+            className="max-w-4xl"
+          >
+            {logos.map((logo, index) => (
+              <SwiperSlide key={index} className="!w-auto">
+                <div className="flex items-center justify-center h-24 md:h-32 px-2 md:px-4">
+                  <img
+                    src={logo}
+                    alt={`Logo ${index}`}
+                    className={`object-contain ${logoSizes[index]}`}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        <button
-          className="next absolute -right-4 md:-right-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white"
-          style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.8)" }}
-        >
-          ❯
-        </button>
-      </motion.div>
+          <button
+            className="next absolute right-1 md:-right-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white"
+            style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.8)" }}
+          >
+            ❯
+          </button>
+        </motion.div>
+      </div>
     </div>
   );
 }
