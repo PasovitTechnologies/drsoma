@@ -7,9 +7,13 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const logos = [
   "https://static.wixstatic.com/media/e6f22e_361e9465a3014ed1a8098ddac3a8febc~mv2.png",
+
   "https://static.wixstatic.com/media/e6f22e_30e2510e27a84677a82bf3c8ca91f2aa~mv2.png/v1/fill/w_189,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ECRC.png",
+
   "https://static.wixstatic.com/media/e6f22e_3e000f82d80b4c61a07548791189a765~mv2.png",
+
   "https://static.wixstatic.com/media/e6f22e_42259c251d1f408f834d78a7978c196a~mv2.png/v1/fill/w_144,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EGPM_Logo_Var_003.png",
+
   "https://static.wixstatic.com/media/e6f22e_c4415a102b83479b90226ed3de9e7b1e~mv2.png/v1/fill/w_318,h_79,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%20%D0%BF%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B4%D0%B6%D0%B8%D0%BA%D0%B8%20%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9.png",
   "https://static.wixstatic.com/media/e6f22e_df68cf687b194af8a6848c8870c768e3~mv2.png/v1/fill/w_366,h_46,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%D0%BB%D0%BE%D0%B3%D0%BE_HD_%D0%B3%D0%BE%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D1%82.png",
   "https://static.wixstatic.com/media/e6f22e_8efc946ce3e44ee3aac0ae8ac50024b4~mv2.png/v1/fill/w_120,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EASHNO_Logo.png",
@@ -17,14 +21,14 @@ const logos = [
 ];
 
 const logoSizes = [
-  "h-9 md:h-24",
+  "h-12 md:h-24",
   "h-13 md:h-18",
-  "h-20",
-  "h-28 md:h-30",
-  "h-10 md:h-24",
-  "h-5 md:h-12",
-  "h-30",
-  "h-24",
+  "h-16 md:h-20",
+  "h-24 md:h-30",
+  "h-12 md:h-24",
+  "h-8 md:h-12",
+  "h-24 md:h-30",
+  "h-20 md:h-24",
 ];
 
 export default function Introduction() {

@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Appointment() {
   return (
@@ -13,10 +14,16 @@ export default function Appointment() {
 
       {/* Content */}
       <div className="flex flex-col md:flex-row items-center">
-        <div className=" md:w-[65%]  text-[rgb(15,58,97)] pr-6">
-          <h2 className="text-3xl md:text-[2.4rem] text-[rgb(15,58,97)] font-poppins font-semibold mb-6">
+        <div className=" md:w-[65%] overflow-hidden text-[rgb(15,58,97)] pr-6">
+          <motion.h2
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-[2.4rem] text-[rgb(15,58,97)] font-poppins font-semibold mb-6"
+          >
             Как попасть на приём?
-          </h2>
+          </motion.h2>
           <div className="space-y-6 text-justify md:text-left">
             <p className="font-poppins">
               <strong className="font-bold font-poppins">
@@ -64,9 +71,15 @@ export default function Appointment() {
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 flex flex-wrap  md:w-[35%] text-[rgb(59,59,59)] justify-center md:justify-between gap-x-16 gap-y-10 md:gap-6">
+        <div className="mt-8 flex flex-wrap  md:w-[35%] text-[rgb(59,59,59)] justify-center md:justify-between gap-x-16 gap-y-10 md:gap-6 overflow-hidden">
           {/* Phone */}
-          <div className="flex flex-col items-center gap-10 ">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center gap-10 "
+          >
             <Phone size={28} />
             <a
               href="https://wa.me/79153333066"
@@ -77,10 +90,16 @@ export default function Appointment() {
               <br />
               <span className=" ">[WhatsApp]</span>
             </a>
-          </div>
+          </motion.div>
 
           {/* Email */}
-          <div className="flex flex-col items-center gap-10 ">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center gap-10 "
+          >
             <Mail size={28} />
             <a
               href="mailto:drsoma@gmail.com"
@@ -88,10 +107,16 @@ export default function Appointment() {
             >
               drsoma@gmail.com
             </a>
-          </div>
+          </motion.div>
 
           {/* Social Icons */}
-          <div className="flex flex-col items-center gap-10  text-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5, delay: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center gap-10  text-2xl"
+          >
             <ThumbsUpIcon size={28} />
             <div className="flex gap-3">
               <a href="https://www.facebook.com/wix" target="_blank">
@@ -110,7 +135,7 @@ export default function Appointment() {
                 <FaInstagram size={20} />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

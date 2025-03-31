@@ -1,4 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
+import { motion } from "framer-motion";
 
 const additionals = [
   {
@@ -79,20 +80,32 @@ export default function Additional() {
       </div>
 
       {/* Content on Right */}
-      <div className="w-full lg:w-2/3 py-5 px-4 sm:px-10 md:px-20 lg:pl-44 lg:pr-20">
-        <h2 className="text-2xl sm:text-3xl md:text-[3.15rem] font-roboto font-semibold leading-[1.4em] text-[rgb(15,58,97)]">
+      <div className="w-full lg:w-2/3 py-5 px-4 sm:px-10 md:px-20 lg:pl-44 lg:pr-20 overflow-hidden">
+        <motion.h2
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-2xl sm:text-3xl md:text-[3.15rem] font-roboto font-semibold leading-[1.4em] text-[rgb(15,58,97)]"
+        >
           Дополнительное образование, стажировки
-        </h2>
+        </motion.h2>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 text-[rgb(59,59,59)]">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 text-[rgb(59,59,59)] overflow-hidden">
           {additionals.map((item, index) => (
-            <div key={index}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              key={index}
+            >
               <h3 className="text-lg font-semibold font-rubik">{item.year}</h3>
               <p
                 className="leading-[1.8em] font-rubik"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
