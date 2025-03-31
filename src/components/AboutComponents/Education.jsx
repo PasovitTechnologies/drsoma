@@ -69,7 +69,7 @@ const education = [
 const Education = () => {
   return (
     <section className="my-10 md:my-16">
-      <div className="max-w-7xl px-4 md:px-20 mx-auto flex flex-col md:flex-row ">
+      <div className="max-w-7xl px-4 md:px-20 mx-auto flex flex-col md:flex-row overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}

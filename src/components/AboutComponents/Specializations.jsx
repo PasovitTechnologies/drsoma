@@ -31,7 +31,7 @@ export const specializations = [
 const Specializations = () => {
   return (
     <section className="my-10 md:my-16">
-      <div className="max-w-7xl px-4 md:px-20 mx-auto  ">
+      <div className="max-w-7xl px-4 md:px-20 mx-auto   overflow-hidden">
         <motion.h2
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -72,7 +72,7 @@ const Specializations = () => {
             />
           </div>
           <div>
-            <ul className="md:pr-4 leading-8">
+            <ul className="md:pr-4 overflow-hidden leading-8">
               {specializations.slice(6, 12).map((specialization, index) => (
                 <motion.li
                   initial={{ opacity: 0, x: 100 }}

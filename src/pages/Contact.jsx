@@ -27,10 +27,14 @@ const Contact = () => {
               <p className="font-bold font-syne text-[rgb(15,58,97)] text-xl">
                 Phone
               </p>
-              <p className=" font-questrial">
+              <a
+                href="https://wa.me/79153333066"
+                target="_blank"
+                className=" font-questrial"
+              >
                 +7 915 333 30 66 <br />{" "}
                 <span className="font-syne">[WhatsApp]</span>
-              </p>
+              </a>
             </div>
           </div>
           <div className="flex flex-col gap-4">

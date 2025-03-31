@@ -15,7 +15,7 @@ const positions = [
 const Positions = () => {
   return (
     <section className="bg-[#3b3b3b] text-white py-8">
-      <div className="max-w-7xl px-4 md:px-10 mx-auto flex flex-col md:flex-row ">
+      <div className="max-w-7xl px-4 md:px-10 mx-auto flex flex-col md:flex-row overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
