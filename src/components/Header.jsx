@@ -32,7 +32,6 @@ const Header = () => {
     { title: "Contact", href: "/contact-3" },
   ];
 
-  // Scroll to section
   const scrollToSection = (id) => {
     const section = document.querySelector(id);
     if (section) {
@@ -40,11 +39,8 @@ const Header = () => {
     }
   };
 
-  // Handle navigation and scrolling
-  // Handle navigation and scrolling
   const handleNavigation = (href, title) => {
     if (href.startsWith("http")) {
-      // ✅ Open external links in a new tab
       window.open(href, "_blank", "noopener,noreferrer");
     } else if (href === "/") {
       if (location.pathname !== "/") {
@@ -67,13 +63,12 @@ const Header = () => {
     setActiveTab(title);
   };
 
-  // Highlight active tab when scrolling
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 150;
 
       if (location.pathname === "/" && scrollPosition <= 200) {
-        setActiveTab("Dr Soma"); // Highlight when at the top (only on homepage)
+        setActiveTab("Dr Soma");
         return;
       }
 
@@ -95,7 +90,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
-  // Scroll to section if URL has hash
   useEffect(() => {
     if (location.pathname === "/" && location.hash) {
       setTimeout(() => scrollToSection(location.hash), 100);
@@ -104,13 +98,13 @@ const Header = () => {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden"; // Prevent scrolling
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""; // Allow scrolling
+      document.body.style.overflow = "";
     }
 
     return () => {
-      document.body.style.overflow = ""; // Cleanup when component unmounts
+      document.body.style.overflow = "";
     };
   }, [isMobileMenuOpen]);
 
@@ -135,7 +129,6 @@ const Header = () => {
             </button>
           ))}
 
-          {/* Dropdown for extra items */}
           <div
             className="relative"
             onMouseEnter={() => setIsDropdownOpen(true)}
@@ -173,7 +166,6 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Mobile Menu Toggle */}
         <div
           className="md:hidden text-blue-900 font-bold text-4xl cursor-pointer absolute right-5 top-5"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -182,12 +174,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-[90%] bg-[#f8f8f8] shadow-lg overflow-y-scroll border-l  p-6 space-y-3 text-blue-900 font-medium z-50 transition-transform duration-300 ease-in-out
     ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        {/* Close Button - Same Position as Hamburger */}
         <div
           className="absolute font-bold right-5 top-5 text-4xl cursor-pointer text-red-500"
           onClick={() => setIsMobileMenuOpen(false)}
@@ -195,7 +185,6 @@ const Header = () => {
           ✕
         </div>
 
-        {/* Mobile Navigation Items */}
         <div className="text-[rgb(15,58,97)] mt-10">
           {navItems.map((item) => (
             <button
@@ -215,7 +204,6 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Extra items in mobile */}
         <details className="mt-2 text-xl">
           <summary className="font-[500] text-[rgb(15,58,97)] font-rubik cursor-pointer">
             Ещё

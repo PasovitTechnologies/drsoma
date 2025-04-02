@@ -96,7 +96,6 @@ const Contact = () => {
           </button>
         </div>
       </div>
-      {/* Google Map */}
       <div className="">
         <MapSection />
       </div>

@@ -36,10 +36,8 @@ export default function Introduction() {
 
   return (
     <div className="relative bg-gray-100 pb-16 md:pb-20 oveflow-hidden">
-      {/* Top Section */}
       <div className="relative pb-16">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 py-10 md:py-16 px-4 md:px-6">
-          {/* Text Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -72,7 +70,6 @@ export default function Introduction() {
             </p>
           </motion.div>
 
-          {/* Image Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -90,7 +87,6 @@ export default function Introduction() {
         <div className="absolute bottom-0 left-0 right-0 bg-repeat-x  md:bg-[length:60%_auto]  bg-center h-40 my-svg-background"></div>
       </div>
 
-      {/* Logo Carousel */}
       <div className="overflow-hidden ">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
