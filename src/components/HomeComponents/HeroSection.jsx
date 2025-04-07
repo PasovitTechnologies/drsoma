@@ -70,17 +70,17 @@ export default function HeroSection() {
           )}
         </motion.div>
       </div>
-      <div className="flex  flex-wrap items-center justify-between px-2 md:px-16 gap-y-8 mt-14 w-full max-w-5xl mx-auto">
+      <div className="flex  flex-wrap items-center justify-between px-2 md:px-16 lg:gap-x-8 xl:gap-x-0 gap-y-8 mt-14 w-full max-w-5xl mx-auto">
         {" "}
         <img
           src="https://static.wixstatic.com/media/e6f22e_0d85db60e80f4c3dba541969cea6010c~mv2.png/v1/fill/w_350,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EAFO_logo_horizont_slogan.png"
           alt="EAFO"
-          className="w-auto object-contain h-9 md:h-14"
+          className="w-auto object-contain h-9 xl:h-14"
         />
         <img
           src="https://static.wixstatic.com/media/e6f22e_30e2510e27a84677a82bf3c8ca91f2aa~mv2.png/v1/fill/w_189,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ECRC.png"
           alt="ECRC"
-          className="w-auto object-contain h-13 md:h-18"
+          className="w-auto object-contain h-13 xl:h-18"
         />
         <img
           src="https://static.wixstatic.com/media/e6f22e_05679ffe1f6b46fd8dfbdc733c319524~mv2.png/v1/fill/w_189,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/FIRMST_Dark_Blue_Logo_edited.png"
@@ -90,17 +90,17 @@ export default function HeroSection() {
         <img
           src="https://static.wixstatic.com/media/e6f22e_42259c251d1f408f834d78a7978c196a~mv2.png/v1/fill/w_144,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EGPM_Logo_Var_003.png"
           alt="EGPM"
-          className="w-auto object-contain h-28 md:h-30"
+          className="w-auto object-contain h-28 xl:h-30"
         />
         <img
           src="https://static.wixstatic.com/media/e6f22e_c4415a102b83479b90226ed3de9e7b1e~mv2.png/v1/fill/w_318,h_79,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%20%D0%BF%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B4%D0%B6%D0%B8%D0%BA%D0%B8%20%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9.png"
           alt="PathoLogica"
-          className="w-auto object-contain h-10 md:h-18"
+          className="w-auto object-contain h-10 xl:h-18"
         />
         <img
           src="https://static.wixstatic.com/media/e6f22e_df68cf687b194af8a6848c8870c768e3~mv2.png/v1/fill/w_366,h_46,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%D0%BB%D0%BE%D0%B3%D0%BE_HD_%D0%B3%D0%BE%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D1%82.png"
           alt="HealthDirect"
-          className="w-auto object-contain h-5 md:h-9"
+          className="w-auto object-contain h-5 xl:h-9"
         />
         <img
           src="https://static.wixstatic.com/media/e6f22e_8efc946ce3e44ee3aac0ae8ac50024b4~mv2.png/v1/fill/w_120,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EASHNO_Logo.png"
@@ -113,7 +113,7 @@ export default function HeroSection() {
           className="w-auto object-contain h-18"
         />
       </div>
-      <div className="max-w-5xl md:pl-24  mt-10 text-left py-6 text-gray-900">
+      <div className="max-w-5xl md:px-6 lg:pl-24  mt-10 text-left py-6 text-gray-900">
         <p className=" font-bold text-[#420075] text-justify">
           Онколог – хирург,
           <span className="text-black font-normal">

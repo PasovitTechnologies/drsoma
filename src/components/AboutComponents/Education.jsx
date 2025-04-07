@@ -69,7 +69,7 @@ const education = [
 const Education = () => {
   return (
     <section className="my-10 md:my-16">
-      <div className="max-w-7xl px-4 md:px-20 mx-auto flex flex-col md:flex-row overflow-hidden">
+      <div className="max-w-7xl px-4 xl:px-20 mx-auto flex flex-col md:flex-row overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -77,7 +77,7 @@ const Education = () => {
           viewport={{ once: true }}
           className="md:w-[35%]"
         >
-          <h2 className="text-[2rem] mb-6 md:mb-0 md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
+          <h2 className="text-[2rem] mb-6 md:mb-0 md:text-[2.5rem] font-semibold text-[rgb(15,58,97)] md:pl-2 xl:pl-0  leading-13">
             {" "}
             Образование
           </h2>
@@ -96,7 +96,7 @@ const Education = () => {
                 {item.year}
               </span>{" "}
               <p
-                className="w-[80%] border-l md:w-full pl-4 md:pl-10 border-[rgb(59,59,59)] text-[rgb(59,59,59)] leading-[1.8em] pb-6 font-questrial"
+                className="w-[80%] border-l md:w-full pl-4 lg:pl-10 border-[rgb(59,59,59)] text-[rgb(59,59,59)] leading-[1.8em] pb-6 font-questrial"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               />
             </motion.li>

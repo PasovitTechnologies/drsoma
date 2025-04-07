@@ -11,9 +11,9 @@ const Contact = () => {
       <h1 className="text-center text-[3.5rem] font-bold text-[rgb(15,58,97)] ">
         Contact
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 border  ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 mt-6 border  ">
         {/* Contact Information */}
-        <div className="border-r flex flex-col py-8 px-6 md:px-46 ">
+        <div className="border-r flex flex-col py-8 px-6 md:px-10  xl:px-46 ">
           <div className="flex  justify-between">
             <div className="mb-6 flex flex-col gap-4">
               <Mail />
@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Contact Form */}
-        <div className="py-8 px-6 md:px-30">
+        <div className="py-8  px-6 md:px-10 xl:px-30">
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label htmlFor="firstName" className="text-sm ">

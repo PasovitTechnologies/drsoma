@@ -56,10 +56,10 @@ const additionals = [
 
 export default function Additional() {
   return (
-    <section className="relative flex flex-col lg:flex-row min-h-screen">
+    <section className="relative flex lg:mt-28 xl:mt-0 flex-col xl:flex-row min-h-screen">
       {/* Static Image on Small Screens, Parallax on Large Screens */}
-      <div className="w-full lg:w-1/3 h-64 lg:h-full overflow-hidden">
-        <div className="block lg:hidden">
+      <div className="w-full xl:w-1/3 h-64 md:h-full  overflow-hidden">
+        <div className="block xl:hidden">
           <img
             src="https://static.wixstatic.com/media/e6f22e_cb9a153afe2a463a927591d7e34c60a0~mv2.jpg"
             alt="Static"
@@ -68,7 +68,7 @@ export default function Additional() {
         </div>
 
         {/* Parallax Effect Only on Large Screens */}
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <Parallax speed={-60} className="w-full h-full">
             <img
               src="https://static.wixstatic.com/media/e6f22e_cb9a153afe2a463a927591d7e34c60a0~mv2.jpg/v1/fill/w_352,h_854,al_c,q_80,enc_avif,quality_auto/e6f22e_cb9a153afe2a463a927591d7e34c60a0~mv2.jpg"
@@ -80,7 +80,7 @@ export default function Additional() {
       </div>
 
       {/* Content on Right */}
-      <div className="w-full lg:w-2/3 py-5 px-4 sm:px-10 md:px-20 lg:pl-44 lg:pr-20 overflow-hidden">
+      <div className="w-full xl:w-2/3 py-5 px-4 sm:px-10 md:px-6 xl:pl-44 xl:pr-20 overflow-hidden">
         <motion.h2
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}

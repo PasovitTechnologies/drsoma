@@ -388,12 +388,12 @@ const philanthropy = [
 
 const Experience = () => {
   return (
-    <div className="px-4  pt-20 pb-10 max-w-6xl  mx-auto">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-0 mb-10">
-        <h2 className="md:w-[35%] text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-7">
+    <div className="px-4 md:px-6 pt-20 pb-10 max-w-6xl  mx-auto">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 mb-10">
+        <h2 className="lg:w-[35%] text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-7">
           Опыт работы
         </h2>
-        <ul className="space-y-6  md:space-y-12 md:w-[65%] list-disc  md:px-6  md:leading-8">
+        <ul className="space-y-6  lg:space-y-12 lg:w-[65%] list-disc  md:px-6  md:leading-8">
           {workExperience.map((job, index) => (
             <li
               key={index}
@@ -402,7 +402,7 @@ const Experience = () => {
               <span className="w-[18%] md:text-lg font-questrial font-bold">
                 {job.year}
               </span>{" "}
-              <p className="w-[75%] md:w-[80%] leading-7">
+              <p className="w-[75%] lg:w-[80%] leading-7">
                 <span
                   className="font-questrial"
                   dangerouslySetInnerHTML={{ __html: job.title }}
@@ -417,14 +417,14 @@ const Experience = () => {
         </ul>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 mb-10 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[40%]">
+      <div className="flex mt-12 mb-10 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[40%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
             {" "}
             Профессиональный опыт
           </h2>
         </div>
-        <ul className="space-y-6 md:space-y-12 md:w-[60%] list-disc  md:px-6  leading-8">
+        <ul className="space-y-6 md:space-y-12  lg:pl-14 xl:pl-0 lg:w-[60%] list-disc  md:px-6  leading-8">
           {professionalExperience.map((job, index) => (
             <li
               key={index}
@@ -434,7 +434,7 @@ const Experience = () => {
                 {job.year}
               </span>{" "}
               <p
-                className="w-[67%] md:w-[75%] leading-7 font-questrial"
+                className="w-[67%] lg:w-[75%] leading-7 font-questrial"
                 dangerouslySetInnerHTML={{ __html: job.description }}
               />
             </li>
@@ -442,14 +442,14 @@ const Experience = () => {
         </ul>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 mb-10 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[42%]">
+      <div className="flex mt-12 mb-10 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[42%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
             {" "}
             Членство в профессиональных организациях
           </h2>
         </div>
-        <ul className="space-y-5 md:w-[58%] list-disc px-4 md:px-6  leading-8">
+        <ul className="space-y-5 lg:w-[58%] list-disc px-4 md:px-12 lg:px-6  leading-8">
           {professionalMemberships.map((membership, index) => (
             <li key={index} className="text-[rgb(59,59,59)] ">
               <p
@@ -461,14 +461,14 @@ const Experience = () => {
         </ul>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 mb-10 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[35%]">
+      <div className="flex mt-12 mb-10 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[35%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
             {" "}
             Общественные позиции
           </h2>
         </div>
-        <ul className="space-y-6 md:space-y-12  md:w-[65%] list-disc    leading-8">
+        <ul className="space-y-6 md:space-y-12 md:px-6 lg:w-[65%] list-disc    leading-8">
           {publicPositions.map((position, index) => (
             <li
               key={index}
@@ -478,7 +478,7 @@ const Experience = () => {
                 {position.year}
               </span>{" "}
               <p
-                className="w-[67%] md:w-[78%] leading-7 font-questrial"
+                className="w-[67%] lg:w-[78%] leading-7 font-questrial"
                 dangerouslySetInnerHTML={{ __html: position.description }}
               />
             </li>
@@ -486,14 +486,14 @@ const Experience = () => {
         </ul>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 mb-10 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[40%]">
+      <div className="flex mt-12 mb-10 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[40%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
             {" "}
             Членство в профессиональных организациях
           </h2>
         </div>
-        <div className="md:w-[60%] flex flex-col gap-8 text-[rgb(59,59,59)]">
+        <div className="lg:w-[60%] md:px-6 flex flex-col gap-8 text-[rgb(59,59,59)]">
           {researchData.map((section, index) => (
             <div key={index} className="space-y-4">
               <h3 className="text-2xl font-semibold ">{section.title}</h3>
@@ -507,14 +507,14 @@ const Experience = () => {
         </div>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 mb-10 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[40%]">
+      <div className="flex mt-12 mb-10 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[40%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
             {" "}
             Успешные проекты
           </h2>
         </div>
-        <ul className=" md:w-[60%]  text-[rgb(59,59,59)] leading-7.5  space-y-10">
+        <ul className=" lg:w-[60%] md:px-6  text-[rgb(59,59,59)] leading-7.5  space-y-10">
           {projects.map((project, index) => (
             <li key={index}>
               <strong dangerouslySetInnerHTML={{ __html: project.title }} />
@@ -538,14 +538,14 @@ const Experience = () => {
         </ul>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 mb-10 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[40%]">
+      <div className="flex mt-12 mb-10 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[40%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13">
             {" "}
             Успешные проекты
           </h2>
         </div>
-        <div className="md:w-[60%] text-[rgb(59,59,59)]">
+        <div className="lg:w-[60%] md:px-6 text-[rgb(59,59,59)]">
           <strong className="text-lg">
             Учрежденные стипендии (основатель и спонсор):
           </strong>

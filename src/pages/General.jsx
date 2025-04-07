@@ -140,9 +140,9 @@ const awards = [
 
 const General = () => {
   return (
-    <div className="px-4 md:px-0 pt-14 pb-10 max-w-5xl mx-auto">
+    <div className="px-4 md:px-6 pt-14 pb-10 max-w-5xl mx-auto">
       <h2 className="text-6xl font-bold text-[#0F3A61] mb-14">Награды</h2>
-      <ul className="space-y-14">
+      <ul className="space-y-14 md:px-6">
         {awards.map((award, index) => (
           <li key={index} className="flex space-x-6 md:space-x-14">
             <span

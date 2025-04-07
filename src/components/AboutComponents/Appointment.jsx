@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Appointment() {
   return (
-    <section className="px-6 md:px-20  lg:px-24 lg:pl-36 py-10 mb-8 text-gray-900">
+    <section className="px-6 md:px-6  xl:px-24 xl:pl-36 py-10 mb-8 text-gray-900">
       {/* Heading */}
 
       {/* Content */}
@@ -71,14 +71,14 @@ export default function Appointment() {
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 flex flex-wrap  md:w-[35%] text-[rgb(59,59,59)] justify-center md:justify-between gap-x-16 gap-y-10 md:gap-6 overflow-hidden">
+        <div className="mt-8 flex flex-wrap  md:w-[35%] text-[rgb(59,59,59)] justify-center md:justify-center lg:justify-between  gap-x-16 gap-y-10 md:gap-6 overflow-hidden">
           {/* Phone */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center gap-10 "
+            className="flex flex-col items-center  gap-10 "
           >
             <Phone size={28} />
             <a

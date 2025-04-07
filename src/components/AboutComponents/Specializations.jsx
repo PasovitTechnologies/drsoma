@@ -31,7 +31,7 @@ export const specializations = [
 const Specializations = () => {
   return (
     <section className="my-10 md:my-16">
-      <div className="max-w-7xl px-4 md:px-20 mx-auto   overflow-hidden">
+      <div className="max-w-7xl px-4 md:px-6 xl:px-20 mx-auto   overflow-hidden">
         <motion.h2
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -42,9 +42,9 @@ const Specializations = () => {
           {" "}
           Специализации
         </motion.h2>{" "}
-        <div className=" grid grid-cols-1 md:grid-cols-[1fr_1.9fr_1fr]">
+        <div className=" grid grid-cols-1  lg:grid-cols-[1fr_1.9fr_1fr]">
           <div>
-            <ul className="md:pl-4  leading-8">
+            <ul className="xl:pl-4 leading-8">
               {specializations.slice(0, 6).map((specialization, index) => (
                 <motion.li
                   initial={{ opacity: 0, x: -100 }}
@@ -64,15 +64,15 @@ const Specializations = () => {
               ))}
             </ul>
           </div>
-          <div className="md:px-6 my-6 md:my-0">
+          <div className="lg:px-6 my-6 lg:my-0">
             <img
               src="https://static.wixstatic.com/media/e6f22e_3f715f66ea264eb483f7148e066ebaf7~mv2.jpeg/v1/crop/x_3,y_7,w_570,h_787/fill/w_570,h_783,al_c,q_85,enc_avif,quality_auto/dr1.jpeg"
               alt=""
-              className=" h-full"
+              className=" md:w-full lg:w-auto h-full md:h-auto lg:h-full "
             />
           </div>
           <div>
-            <ul className="md:pr-4 overflow-hidden leading-8">
+            <ul className="xl:pr-4 overflow-hidden leading-8">
               {specializations.slice(6, 12).map((specialization, index) => (
                 <motion.li
                   initial={{ opacity: 0, x: 100 }}

@@ -7,7 +7,7 @@ export default function SuccessfulProjects() {
         Успешные проекты
       </h2>
 
-      <ul className="list-disc list-outside pl-4 md:pl-28 space-y-2">
+      <ul className="list-disc list-outside pl-4 md:pl-10 lg:pl-28 space-y-2">
         {projects.map((project, index) => (
           <li key={index}>
             <strong dangerouslySetInnerHTML={{ __html: project.title }} />

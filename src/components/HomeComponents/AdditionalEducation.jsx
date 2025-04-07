@@ -11,7 +11,7 @@ export default function AdditionalEducation() {
         <h2 className="text-4xl font-semibold text-[#420075]">
           Как попасть на приём?
         </h2>
-        <div className=" md:pl-28 text-justify leading-7.5">
+        <div className=" md:pl-10 lg:pl-28 text-justify leading-7.5">
           <p>
             <b>Сомасундарам Субраманиан</b> (доктор Сома) ведет{" "}
             <b>очный приём в Москве</b>. Для жителей других регионов и стран
@@ -51,7 +51,7 @@ export default function AdditionalEducation() {
       <h2 className="text-4xl font-semibold pt-10 text-[#420075]">
         Дополнительное образование, стажировки
       </h2>
-      <ul className="mt-4 pl-4 md:pl-28 space-y-2 list-disc list-outside">
+      <ul className="mt-4 pl-4 md:pl-10 lg:pl-28 space-y-2 list-disc list-outside">
         {additionalEducation.map((item, index) => (
           <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
         ))}

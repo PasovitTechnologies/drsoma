@@ -21,14 +21,14 @@ const logos = [
 ];
 
 const logoSizes = [
-  "h-12 md:h-24",
-  "h-13 md:h-18",
-  "h-16 md:h-20",
-  "h-24 md:h-30",
-  "h-12 md:h-24",
-  "h-8 md:h-12",
-  "h-24 md:h-30",
-  "h-20 md:h-24",
+  "h-12 lg:h-24",
+  "h-13 lg:h-18",
+  "h-16 lg:h-20",
+  "h-24 lg:h-30",
+  "h-12 lg:h-24",
+  "h-8 lg:h-12",
+  "h-24 lg:h-30",
+  "h-20 lg:h-24",
 ];
 
 export default function Introduction() {
@@ -37,15 +37,15 @@ export default function Introduction() {
   return (
     <div className="relative bg-gray-100 pb-16 md:pb-20 oveflow-hidden">
       <div className="relative pb-16">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 py-10 md:py-16 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-6 md:gap-10 py-10 md:py-16 px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}
-            className="md:w-2/3 md:px-20 md:pr-36 text-center md:text-left"
+            className="lg:w-2/3 lg:pr-10 xl:px-20 xl:pr-36 text-center lg:text-left"
           >
-            <h1 className="text-3xl md:text-[3.5rem] font-bold text-[rgb(15,58,97)] leading-tight md:leading-[1.2em]">
+            <h1 className="text-3xl md:text-[3.5rem] font-bold text-[rgb(15,58,97)] leading-tight lg:leading-[1.2em]">
               СУБРАМАНИАН Сомасундарам
             </h1>
             <h2 className="text-lg md:text-2xl text-[rgb(59,59,59)] mt-2 md:mt-1">
@@ -80,11 +80,11 @@ export default function Introduction() {
             <img
               src="https://static.wixstatic.com/media/e6f22e_ec0df83195fd4dd7b3d5503bf8e4dbfa~mv2.jpg/v1/crop/x_0,y_0,w_4912,h_6159/fill/w_460,h_661,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_6089_JPG.jpg"
               alt="Profile"
-              className="shadow-lg h-96 md:h-[72vh]"
+              className="shadow-lg h-96 lg:h-[45vh] xl:h-[72vh]"
             />
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-repeat-x  md:bg-[length:60%_auto]  bg-center h-40 my-svg-background"></div>
+        <div className="absolute bottom-0 left-0 right-0 bg-repeat-x  lg:bg-[length:60%_auto]  bg-center h-40 my-svg-background"></div>
       </div>
 
       <div className="overflow-hidden ">
@@ -93,10 +93,10 @@ export default function Introduction() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
           viewport={{ once: true }}
-          className="mt-6 max-w-screen md:max-w-4xl relative mx-auto  px-4"
+          className="mt-6 max-w-screen lg:max-w-4xl relative mx-auto  px-4 md:px-6 "
         >
           <button
-            className="prev absolute left-1 md:-left-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white cursor-pointer"
+            className="prev absolute left-1 lg:-left-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white cursor-pointer"
             style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.8)" }}
           >
             ❮
@@ -130,7 +130,7 @@ export default function Introduction() {
           </Swiper>
 
           <button
-            className="next absolute right-1 md:-right-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white"
+            className="next absolute right-1 lg:-right-14 top-1/2 -translate-y-1/2 z-10 text-4xl md:text-7xl text-white"
             style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.8)" }}
           >
             ❯

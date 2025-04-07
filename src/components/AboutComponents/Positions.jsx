@@ -15,19 +15,19 @@ const positions = [
 const Positions = () => {
   return (
     <section className="bg-[#3b3b3b] text-white py-8">
-      <div className="max-w-7xl px-4 md:px-10 mx-auto flex flex-col md:flex-row overflow-hidden">
+      <div className="max-w-7xl px-4 md:px-6 xl:px-10 mx-auto flex flex-col lg:flex-row overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
-          className="md:w-[40%]"
+          className="lg:w-[40%]"
         >
-          <h2 className="text-5xl pl-0 md:pl-10 md:text-[3.5rem] font-semibold mb-8 md:mb-0 leading-13">
+          <h2 className="text-5xl pl-0 xl:pl-10 md:text-[3.5rem] font-semibold mb-8 lg:mb-0 leading-13">
             Должности
           </h2>
         </motion.div>
-        <ul className="space-y-8 md:w-[60%] md:px-0 md:pl-2 leading-8">
+        <ul className="space-y-8 lg:w-[60%] md:px-0 md:pl-2 leading-8">
           {positions.map((position, index) => (
             <motion.li
               initial={{ opacity: 0 }}

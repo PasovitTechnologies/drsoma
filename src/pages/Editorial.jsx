@@ -48,12 +48,12 @@ const publications = [
 
 const Editorial = () => {
   return (
-    <div className="px-4 md:px-0 pt-20 pb-10 max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-0 mb-10">
-        <h2 className="md:w-[40%] text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-7">
+    <div className="px-4 md:px-6 pt-20 pb-10 max-w-6xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 mb-10">
+        <h2 className="lg:w-[40%] text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-7">
           Редакторский опыт
         </h2>
-        <ul className="space-y-6 md:space-y-12 md:w-[60%] list-disc px-4  leading-8">
+        <ul className="space-y-6 lg:space-y-12 lg:w-[60%] list-disc px-4 md:px-6 leading-8">
           {editorialExperience.map((editorial, index) => (
             <li key={index} className="text-[rgb(59,59,59)]">
               <p
@@ -65,8 +65,8 @@ const Editorial = () => {
         </ul>
       </div>
       <div className="h-[0.05rem] w-[90%] mx-auto bg-[rgb(15,58,97)]/50"></div>
-      <div className="flex mt-12 flex-col md:flex-row gap-8 md:gap-0">
-        <div className="md:w-[40%]">
+      <div className="flex mt-12 flex-col lg:flex-row gap-8 lg:gap-0">
+        <div className="lg:w-[40%]">
           <h2 className="text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-13 mb-1 md:mb-3">
             {" "}
             Избранные публикации (Всего более 130)
@@ -82,7 +82,7 @@ const Editorial = () => {
             </a>
           </p>
         </div>
-        <ul className="space-y-6 md:space-y-12 md:w-[60%] list-disc px-4 leading-8">
+        <ul className="space-y-6 md:space-y-12 md:px-6 lg:w-[60%] list-disc px-4 leading-8">
           {publications.map((item, index) => (
             <li className="text-[rgb(59,59,59)]" key={index}>
               <p className=" font-questrial">{item}</p>

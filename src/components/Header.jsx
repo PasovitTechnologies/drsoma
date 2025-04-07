@@ -109,9 +109,9 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="bg-[#f8f8f8] shadow fixed w-full h-20  flex z-50">
-      <div className=" mx-auto w-full px-32 py-4 flex items-center justify-between">
-        <nav className="hidden md:flex justify-between w-full text-[rgb(15,58,97)] ">
+    <header className="bg-[#f8f8f8] shadow fixed w-full h-20 md:h-24 lg:h-28  flex z-50">
+      <div className=" mx-auto w-full xl:px-32 py-4 flex items-center justify-between">
+        <nav className="hidden xl:flex justify-between w-full text-[rgb(15,58,97)] ">
           {navItems.map((item) => (
             <button
               key={item.title}
@@ -167,7 +167,7 @@ const Header = () => {
         </nav>
 
         <div
-          className="md:hidden text-blue-900 font-bold text-4xl cursor-pointer absolute right-5 top-5"
+          className="xl:hidden text-blue-900 font-bold text-4xl md:text-5xl lg:text-6xl cursor-pointer absolute right-5 top-5"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           ☰
@@ -175,7 +175,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed top-0 right-0 h-full w-[90%] bg-[#f8f8f8] shadow-lg overflow-y-scroll border-l  p-6 space-y-3 text-blue-900 font-medium z-50 transition-transform duration-300 ease-in-out
+        className={`fixed top-0 right-0 h-full w-[90%] md:w-[60%] bg-[#f8f8f8] shadow-lg overflow-y-scroll border-l  p-6 space-y-3 text-blue-900 font-medium z-50 transition-transform duration-300 ease-in-out
     ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div
