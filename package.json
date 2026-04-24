@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-sitemap.js && node scripts/seo-audit.js && node scripts/validate-schema.js && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "seo-audit": "node scripts/seo-audit.js",
+    "validate-schema": "node scripts/validate-schema.js"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
@@ -17,6 +20,7 @@
     "lucide-react": "^0.484.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet-async": "^3.0.0",
     "react-icons": "^5.5.0",
     "react-player": "^2.16.0",
     "react-router": "^7.4.0",

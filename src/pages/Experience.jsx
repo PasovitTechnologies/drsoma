@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 
 const workExperience = [
   {
@@ -389,6 +390,11 @@ const philanthropy = [
 const Experience = () => {
   return (
     <div className="px-4 md:px-6 pt-20 pb-10 max-w-6xl  mx-auto">
+      <SEO
+        title="Опыт работы и профессиональная деятельность"
+        description="Профессиональный опыт доктора Сомасундарама Субраманиана: хирург-онколог, преподаватель, основатель EAFO и ECRC. Членство в ESSO, ESMO, AACR, ASCO и других международных организациях."
+        path="/experience"
+      />
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 mb-10">
         <h2 className="lg:w-[35%] text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-7">
           Опыт работы

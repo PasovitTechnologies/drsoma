@@ -1,10 +1,25 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
+import SEO from "../components/SEO";
 import MapSection from "../components/MapSection";
+
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Связаться с доктором Субраманианом",
+  "description": "Контактная форма для связи с доктором Сомасундарамом Субраманианом",
+  "url": "https://your-domain.com/contact-3",
+};
 
 const Contact = () => {
   return (
     <section className="container mx-auto text-[rgb(59,59,59)] pt-6">
+      <SEO
+        title="Связаться — Форма обратной связи"
+        description="Свяжитесь с доктором Сомасундарамом Субраманианом. Контактная форма, email: drsoma@gmail.com, WhatsApp: +7 915 333 30 66. Адрес: Москва, Волоколамское шоссе, д. 1, офис 606C."
+        path="/contact-3"
+        jsonLd={contactJsonLd}
+      />
       <h2 className="text-center text-xl font-semibold text-[rgb(15,58,97)]">
         Let's Connect
       </h2>
