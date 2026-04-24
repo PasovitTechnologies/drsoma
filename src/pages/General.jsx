@@ -1,5 +1,4 @@
 import React from "react";
-import SEO from "../components/SEO";
 
 const awards = [
   {
@@ -142,11 +141,6 @@ const awards = [
 const General = () => {
   return (
     <div className="px-4 md:px-6 pt-14 pb-10 max-w-5xl mx-auto">
-      <SEO
-        title="Награды и достижения"
-        description="Награды доктора Субраманиана: лауреат медали РАМН, награды GAPIO, признание лидерства в превентивной онкологии, премия «Будем жить», гранты и постерные доклады на международных конгрессах."
-        path="/general"
-      />
       <h2 className="text-6xl font-bold text-[#0F3A61] mb-14">Награды</h2>
       <ul className="space-y-14 md:px-6">
         {awards.map((award, index) => (

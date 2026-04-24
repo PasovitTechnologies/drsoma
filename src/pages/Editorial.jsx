@@ -1,5 +1,4 @@
 import React from "react";
-import SEO from "../components/SEO";
 
 const editorialExperience = [
   "International Journal of Head & Neck Surgery «Международный журнал хирургии головы и шеи» – Издательство «Джейпи»",
@@ -50,11 +49,6 @@ const publications = [
 const Editorial = () => {
   return (
     <div className="px-4 md:px-6 pt-20 pb-10 max-w-6xl mx-auto">
-      <SEO
-        title="Публикации и редакторский опыт"
-        description="Избранные публикации доктора Субраманиана (более 130). h-index: 17, i10-index: 27. Редакторский опыт в ведущих медицинских журналах: EJSO, ORL Journal, «Вестник РОНЦ» и др."
-        path="/editorial"
-      />
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 mb-10">
         <h2 className="lg:w-[40%] text-[2rem] md:text-[2.5rem] font-semibold text-[rgb(15,58,97)]  leading-7">
           Редакторский опыт

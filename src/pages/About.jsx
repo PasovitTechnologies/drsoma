@@ -1,5 +1,4 @@
 import React from "react";
-import SEO from "../components/SEO";
 import Introduction from "../components/AboutComponents/Introduction";
 import Positions from "../components/AboutComponents/Positions";
 import Education from "../components/AboutComponents/Education";
@@ -11,11 +10,6 @@ import Appointment from "../components/AboutComponents/Appointment";
 const About = () => {
   return (
     <ParallaxProvider>
-      <SEO
-        title="О докторе Субраманиане — Биография и специализации"
-        description="Биография доктора Сомасундарама Субраманиана: образование, специализации, должности, научная деятельность. Основатель EAFO и ECRC. Хирург-онколог в Москве."
-        path="/about"
-      />
       <Introduction />
       <Positions />
       <Education />

@@ -1,5 +1,4 @@
 import React from "react";
-import SEO from "../components/SEO";
 
 /**
  * Component displaying contact information of the organization
@@ -9,11 +8,6 @@ import SEO from "../components/SEO";
 const Contacts = () => {
   return (
     <div className="text-center  h-[80vh] font-bold text-xl md:text-2xl flex flex-col  justify-center text-[rgb(40,41,66)] px-4 ">
-      <SEO
-        title="Контакты — ЕАФО"
-        description="Контактная информация: АНО «Научно-образовательный центр «Евразийская онкологическая программа» ЕАФО». Адрес: 125080, Москва, Волоколамское шоссе, д. 1, офис 606C. Email: drsoma@gmail.com."
-        path="/contact"
-      />
       <p className="mb-3">Автономная некоммерческая организация</p>
       <p className="mb-3">
         «Научно-образовательный центр «Евразийская онкологическая программа»
